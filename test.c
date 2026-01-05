@@ -60,7 +60,7 @@ int main()
   const char *fullPath_of_WeatherLogo;
 
   weatherData myData;
-  const char *API_KEY = "REMOVED";
+  const char *API_KEY = "ENTER YOUR API KEY";
   char url[256];
   snprintf(url, sizeof(url), "http://api.openweathermap.org/data/2.5/weather?q=lahore&appid=%s", API_KEY);
 

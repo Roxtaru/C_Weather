@@ -1,0 +1,1 @@
+gcc test.c -o test -lraylib -lcurl -lGL -lm -lpthread -ldl -lrt -lX11 -lcjson

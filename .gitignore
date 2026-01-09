@@ -1,0 +1,25 @@
+# Build outputs
+test
+*.o
+*.a
+*.so
+*.dylib
+*.dSYM
+*.dSYM/
+
+# Tooling
+compile_commands.json
+.vscode/
+
+# macOS
+.DS_Store
+.cache/
+
+
+# Tooling
+compile_commands.json
+.vscode/
+
+# macOS
+.DS_Store
+.cache/

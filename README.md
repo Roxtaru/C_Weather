@@ -45,7 +45,11 @@ An **educational open‑source project** built to learn and get hands‑on expos
 ### Build & Run (Linux example)
 
 ```bash
-gcc main.c -o weather_app -lcurl -lraylib -lm -lpthread -ldl -lrt -lX11
+
+gcc test.c -o weather_app \
+  -lraylib -lcurl -lcjson \
+  -lGL -lm -lpthread -ldl -lrt -lX11
+
 ./weather_app
 ```
 ---

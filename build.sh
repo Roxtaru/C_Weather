@@ -1,1 +1,6 @@
-gcc test.c -o test -lraylib -lcurl -lGL -lm -lpthread -ldl -lrt -lX11 -lcjson
+#!/bin/bash
+
+gcc test.c -o weather_app \
+  -lraylib -lcurl -lcjson \
+  -lGL -lm -lpthread -ldl -lrt -lX11
+

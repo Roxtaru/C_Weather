@@ -1,7 +1,7 @@
 raylib
 weather_app
 # Build outputs
-test
+weather_app
 *.o
 *.a
 *.so
@@ -16,3 +16,4 @@ compile_commands.json
 # macOS
 .DS_Store
 .cache/
+.env

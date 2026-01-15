@@ -100,6 +100,10 @@ AppState fetchWeatherData(const char *city, const char *API_KEY, weatherData *my
   
   curl = curl_easy_init();
   if (curl) {
+    if (strchr(city, ' ') != NULL){
+      char * encodeCity = curl_easy_escape(curl, city, 0);
+      snprintf(url, sizeof(url), "https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", encodeCity, API_KEY);
+    }
     curl_easy_setopt(curl, CURLOPT_URL, url);
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, callback_func);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &chunk);
@@ -226,9 +230,9 @@ int main(int argc, char *argv[])
                "Missing API Key\nSet OPENWEATHER_API_KEY environment variable");
       printf("Missing API KEY. Set OPENWEATHER_API_KEY\n");
   } else {
-    // Fetch weather data on startup
-    appState = fetchWeatherData(city, API_KEY, &myData, &fullPath_of_WeatherBanner, &fullPath_of_WeatherLogo, basePath);
-  }
+      // Fetch weather data on startup
+      appState = fetchWeatherData(city, API_KEY, &myData, &fullPath_of_WeatherBanner, &fullPath_of_WeatherLogo, basePath);
+    }
 
   InitWindow(winWidth, winHeight, "Weather App");
   
